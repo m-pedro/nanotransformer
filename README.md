@@ -1,6 +1,6 @@
 # nanotransformer
 
-A modern Llama-3 / GPT-style autoregressive Transformer built from scratch in Python and PyTorch. Implements Byte-Pair Encoding (`BPE`), Root Mean Square Normalization (`RMSNorm`), Rotary Positional Embeddings (`RoPE`), Grouped-Query Attention (`GQA`) with autoregressive `KV-Cache`, `SwiGLU` feed-forward layers, top-$k$/top-$p$ nucleus sampling, and an `AdamW` training pipeline.
+A modern Llama-3 / GPT-style autoregressive Transformer built from scratch in Python and PyTorch. Implements Byte-Pair Encoding (`BPE`), Root Mean Square Normalization (`RMSNorm`), Rotary Positional Embeddings (`RoPE`), Grouped-Query Attention (`GQA`) with autoregressive `KV-Cache`, `SwiGLU` feed-forward layers, `top-k` / `top-p` nucleus sampling, and an `AdamW` training pipeline.
 
 ## 15-Day Incremental Engineering Roadmap (Month 4, Days 91–105)
 
@@ -13,7 +13,7 @@ A modern Llama-3 / GPT-style autoregressive Transformer built from scratch in Py
 - [ ] **Day 97:** Implement `SwiGLU` gated feed-forward network (`nanotransformer/ffn.py`)
 - [ ] **Day 98:** Assemble pre-norm `TransformerDecoderBlock` with residual connections (`nanotransformer/block.py`)
 - [ ] **Day 99:** Build full `NanoTransformer` causal language model with weight tying (`nanotransformer/model.py`)
-- [ ] **Day 100:** Implement temperature, top-$k$, and top-$p$ (nucleus) autoregressive generation (`nanotransformer/generate.py`)
+- [ ] **Day 100:** Implement temperature, `top-k`, and `top-p` (nucleus) autoregressive generation (`nanotransformer/generate.py`)
 - [ ] **Day 101:** Build sliding-window next-token dataset loader and cosine warmup LR scheduler (`nanotransformer/data.py`)
 - [ ] **Day 102:** Implement `AdamW` training loop with gradient clipping and checkpointing (`nanotransformer/train.py`)
 - [ ] **Day 103:** Add convergence integration test verifying loss -> 0 on synthetic sequence memorization
